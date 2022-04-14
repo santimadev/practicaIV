@@ -3,21 +3,26 @@ const Schema=mongoose.Schema;
 
 let Student = new Schema({
 
-    name:{
-        
+    client:{
         type:String,
         required: true,
     },
 
-    surname:{
+    password:{
         type:String,
         required:true,
     },
-
     date:{
         type:Date,
         default: Date.now,
     },
+    notas: [
+        {
+            id: String,
+            title: String,
+            describe: String,
+        }
+    ]
 
 });
 
